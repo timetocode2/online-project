@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agu+Display&family=Anton+SC&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Dancing+Script:wght@400..700&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Playwrite+AU+SA:wght@100..400&family=Rubik+Vinyl&family=Sixtyfour&display=swap" rel="stylesheet"></head>
+<style>
+    .fonttype1 {
+font-family: "Anton SC", serif;
+font-weight: 400;
+font-style: normal;
+}
+
+.fonttype2 {
+font-family: "Playwrite AU SA", serif;
+font-optical-sizing: auto;
+font-weight: <weight>;
+font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(248, 155, 171);
+    width: 100vw;
+    height: 95vh;
+    overflow: hidden;
+    border: 3px blue solid;
+}
+
+header {
+    height: 41px;
+    background-color: rgb(253, 43, 43);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vh;
+    border-bottom: 3px green solid;
+
+}
+
+#navul {
+    display: grid;
+    list-style: none;
+    grid-template-columns: auto auto auto auto;
+    background-color: rgb(252, 139, 158);
+    font-size: 2vw;
+    height: 41px;
+    align-items: center;
+}
+
+
+main {
+    border: green 4px solid;
+    height: 82vh;
+    box-sizing: border-box;
+
+
+}
+
+.setting {
+    border: black 4px solid;
+    width: 209px;
+    height: 81vh;
+    box-sizing: border-box;
+    background-color: rgb(248, 133, 152);
+    color: white;
+    /* visibility: hidden !important;  */
+
+    position: absolute;
+    top: 90px;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+.two {
+    font-size: 25px;
+    margin: 10px;
+
+}
+
+#main2 {
+    position: absolute;
+    border: rgb(228, 224, 15) 4px solid;
+    top: 88px;
+    right: 0px;
+    z-index: -1;
+    width: calc(100vw - 220px);
+    height: 81vh;
+    display: flex;
+}
+
+div ul li {
+    margin: 20px;
+    list-style: none;
+    font-weight: 100;
+}
+
+
+#themes1{
+    visibility: hidden !important;
+}
+#fonts1{
+        visibility: hidden !important;
+
+    }
+    #fun1{
+        visibility: hidden !important;
+    }
+    #about1{
+        visibility: hidden !important;
+
+    }
+
+    #scrn{
+        border: 2px dodgerblue dotted;
+        background-color: rgba(0, 0, 0, 0.233);
+        width: 50%;
+        height: 100%;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+    }
+
+    #scrn2{
+        border: black 2px  dotted;
+        width: 90%;
+        height: 60%;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.31);
+        margin: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+    #keypad{
+        width: 50%;
+        height: 100%;
+        color: white;
+        display: grid;
+
+        align-items: center;
+        
+
+    }
+
+    .arrange {
+        height: 82%;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto auto auto auto;
+        justify-content: space-around;
+        align-items: flex-end;
+        font-size: 27px;
+
+    }
+    .anim {
+        border: 2px solid rgb(255, 0, 0);
+        background: rgba(0, 0, 0, 0.247);
+        border-radius: 30px;
+        width: 70px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .anim:hover {
+        border: 2px solid rgb(0, 47, 255);
+        background: rgba(0, 0, 0, 0.247);
+        width: 56px;
+        height: 42px;
+        transition: 0.2s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+        color: rgb(179, 3, 3);
+
+    }
+    .sixe {
+        display: inline-block;
+        font-size: 28px;
+
+    }
+
+    /* media qurry
+    bole to mobile ki css
+    media querry
+    media querry */
+
+    @media (max-width: 700px) {
+        body {
+            background-color: ;
+        }
+    
+        header {}
+    
+        #navul {
+            font-size: 22px;
+            font-weight: 600;
+        }
+    
+        main {
+            height: 85vh;
+        }
+    
+        .setting {
+            height: 65%;
+            width: 167px;
+            position: absolute;
+            top: 90px;
+    
+        }
+        #themes0 {
+            position: absolute;
+            top: 73px;
+            visibility: hidden !important;
+        }
+        #fonts1{
+            height: 55%;
+
+        }
+        #about1{
+            height: 80%;
+        }
+    #closeBtn {
+        width: 110px;
+        height: 40px;
+        font-size: 20px;
+    }
+        #main2 {
+    
+            border: rgb(228, 224, 15) 5px solid;
+            width: 100%;
+            height: 92%;
+            box-sizing: border-box;
+            position: absolute;
+            top: 88px;
+            right: -3px;
+            display:contents;
+
+    
+    
+        }
+    /* from here maincalc css is going to be started...
+    from here maincalc css is going to be started... 
+    from here maincalc css is going to be started...*/
+
+    
+    #scrn{
+        width: 100%;
+        height: 40%;
+    }
+    
+    #scrn2{
+        margin: 23px;
+    }
+    #keypad{
+        width: 100%;
+        height: 60%;
+    }
+
+    }
+    /* end end end
+    end end end
+    end end end media querry end */
+
+
+
+</style>
+<body>
+    <header>
+        <span class="one">Welcome To My Calc</span>
+    </header>
+    <nav>
+        <ul id="navul">
+            <li id="nav1">Themes</li>
+            <li id="nav2">Fonts</li>
+            <li id="nav3">Fun calc</li>
+            <li id="nav4">About</li>
+        </ul>
+    </nav>
+    <main>
+        <div  id="themes0"  class="setting"></div>
+
+        <div id="themes1" class="setting">
+            <span class="two">=> Themes</span>
+            <ul>
+                <li id="the1">Default</li>
+                <li id="the2">Dark Theme</li>
+                <li id="the3">Violet Theme</li>
+                <li id="the4">Cyan Theme</li>
+                <li id="the5">Green Theme</li>
+                <li id="the6">Yellow Theme</li>
+                <li id="the7">Blue Theme</li>
+                <li id="the8">Orange Theme</li>
+            </ul>
+        </div>
+        <div id="fonts1" class="setting">
+            <span class="two">Fonts</span>
+            <ul>
+                <li id="fon1">font type1</li>
+                <li id="fon2">font type2</li>
+                <li id="fon3">font type3</li>
+                <li id="fon4">font type4</li>
+                <li id="fon5">font type5</li>
+                <li id="fon6">font type6</li>
+            </ul>
+
+        </div>
+        <div id="fun1" class="setting">
+            <span class="two">Fun calc</span>
+            <ul>
+                <li id="fuc1">1. loding...</li>
+                <li id="fuc2">2. loding...</li>
+                <li id="fuc3">3. loding...</li>
+                <li id="fuc4">4. loding...</li>
+                <li id="fuc5">5. loding...</li>
+                <li id="fuc6">6. loding...</li>
+                <li id="fuc7">7. loding...</li>
+                <li id="fuc8">8. loding...</li>
+            </ul>
+
+        </div>
+        <div id="about1" class="setting">
+            <span class="two">About</span>
+            <ul>
+                <li id="abo1">1. coming...</li>
+                <li id="abo2">2. coming...</li>
+                <li id="abo3">3. coming...</li>
+                <li id="abo4">4. coming...</li>
+                <li id="abo5">5. coming...</li>
+                <li id="abo6">6. coming...</li>
+                <li id="abo7">7. coming...</li>
+                <li id="abo8">8. coming...</li>
+                <li id="abo9">9. coming...</li>
+                <li id="abo10">10. coming...</li>
+            </ul>
+
+        </div>
+
+        <div id="main2">
+            <div id="scrn" class="maincalc">
+                <span>hello dear ! You're welcome a lot in my calc... hey plz tap on "HI" button and explore "Themes and Fonts"</span>
+                <div id="scrn2">
+                    <div class="mydis">
+                        <div id="bbtn1" class="sixe"></div>
+                        <div id="bbtn2" class="sixe"></div>
+                        <div id="bbtn3" class="sixe"></div>
+                        <div id="bbtn4" class="sixe"></div>
+                        <div id="bbtn5" class="sixe"></div>
+                        <div id="bbtn6" class="sixe"></div>
+                        <div id="bbtn7" class="sixe"></div>
+                        <div id="bbtn8" class="sixe"></div>
+                        <div id="bbtn9" class="sixe"></div>
+                        <div id="bbtn10" class="sixe"></div>
+                        <div id="bbtn11" class="sixe"></div>
+                        <div id="bbtn12" class="sixe"></div>
+                        <div id="bbtn13" class="sixe"></div>
+                        <div id="bbtn14" class="sixe"></div>
+                        <div id="bbtn15" class="sixe"></div>
+                        <div id="bbtn16" class="sixe"></div>
+                        <div id="bbtn17" class="sixe"></div>
+                        <div id="bbtn18" class="sixe"></div>
+                        <div id="bbtn19" class="sixe"></div>
+                        <div id="bbtn20" class="sixe"></div>
+                    </div>            
+                </div></div>
+                <div id="keypad" class="maincalc">
+                <div class="arrange">
+                    <div id="btn1" class="bbtn1 anim">1</div>
+                    <div id="btn2" class="bbtn2 anim">2</div>
+                    <div id="btn3" class="bbtn3 anim">3</div>
+                    <div id="btn4" class="bbtn4 anim">4</div>
+                    <div id="btn5" class="bbtn5 anim">5</div>
+                    <div id="btn6" class="bbtn6 anim">6</div>
+                    <div id="btn7" class="bbtn7 anim">7</div>
+                    <div id="btn8" class="bbtn8 anim">8</div>
+                    <div id="btn9" class="bbtn9 anim">9</div>
+                    <div id="btn10" class="bbtn10 anim">0</div>
+                    <div id="btn11" class="bbtn11 anim">-</div>
+                    <div id="btn12" class="bbtn12 anim">+</div>
+                    <div id="btn13" class="bbtn13 anim">*</div>
+                    <div id="btn14" class="bbtn14 anim">/</div>
+                    <div id="btn15" class="bbtn15 anim">=</div>
+                    <div id="btn16" class="bbtn16 anim">%</div>
+                    <div id="btn17" class="bbtn17 anim">HI</div>
+                    <div id="btn18" class="bbtn18 anim">MA</div>
+                    <div id="btn19" class="bbtn19 anim">NS</div>
+                    <div id="btn20" class="bbtn20 anim">HU</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script>
+const setting1 = document.querySelector("#nav1");
+ setting1.addEventListener("click", function(){
+    let closeButton = document.getElementById("closeBtn");
+
+ if(document.querySelector("#themes1").style.visibility === "hidden")
+    {document.querySelector("#themes1").style.setProperty("visibility", "visible", "important");
+        if (!closeButton) { 
+            closeButton = document.createElement("button");
+            closeButton.id = "closeBtn";
+            closeButton.innerText = "Close";
+            closeButton.addEventListener("click", function () {
+                document.querySelector("#themes1").style.visibility = "hidden";
+                closeButton.remove();});};
+        const close11 = document.querySelectorAll("#fonts1, #fun1, #about1");
+        close11.forEach(close1 => {
+            if(close1.style.visibility !== "hidden"){
+                close1.style.setProperty("visibility", "hidden", "important");
+                closeButton.remove();}});
+                document.querySelector("#themes1").append(closeButton); }
+ else{document.querySelector("#themes1").style.setProperty("visibility", "hidden", "important");        
+    if (closeButton) {closeButton.remove();};
+ }
+ });
+
+
+ const setting2 = document.querySelector("#nav2");
+ setting2.addEventListener("click", function(){
+    let closeButton = document.getElementById("closeBtn");
+
+ if(document.querySelector("#fonts1").style.visibility === "hidden")
+    {document.querySelector("#fonts1").style.setProperty("visibility", "visible", "important");
+        if (!closeButton) { 
+            closeButton = document.createElement("button");
+            closeButton.id = "closeBtn";
+            closeButton.innerText = "Close";
+            closeButton.addEventListener("click", function () {
+                document.querySelector("#fonts1").style.visibility = "hidden";
+                closeButton.remove();});};
+        const close11 = document.querySelectorAll("#themes1, #fun1, #about1");
+        close11.forEach(close1 => {
+            if(close1.style.visibility !== "hidden"){
+                close1.style.setProperty("visibility", "hidden", "important");
+                closeButton.remove();}});
+                document.querySelector("#fonts1").append(closeButton); }
+ else{document.querySelector("#fonts1").style.setProperty("visibility", "hidden", "important");        
+    if (closeButton) {closeButton.remove();};
+ }
+ });
+
+ const setting3 = document.querySelector("#nav3");
+ setting3.addEventListener("click", function(){
+    let closeButton = document.getElementById("closeBtn");
+
+ if(document.querySelector("#fun1").style.visibility === "hidden")
+    {document.querySelector("#fun1").style.setProperty("visibility", "visible", "important");
+        if (!closeButton) { 
+            closeButton = document.createElement("button");
+            closeButton.id = "closeBtn";
+            closeButton.innerText = "Close";
+            closeButton.addEventListener("click", function () {
+                document.querySelector("#fun1").style.visibility = "hidden";
+                closeButton.remove();});};
+        const close11 = document.querySelectorAll("#fonts1, #themes1, #about1");
+        close11.forEach(close1 => {
+            if(close1.style.visibility !== "hidden"){
+                close1.style.setProperty("visibility", "hidden", "important");
+                closeButton.remove();}});
+                document.querySelector("#fun1").append(closeButton); }
+ else{document.querySelector("#fun1").style.setProperty("visibility", "hidden", "important");        
+    if (closeButton) {closeButton.remove();};
+ }
+ });
+
+ const setting4 = document.querySelector("#nav4");
+ setting4.addEventListener("click", function(){
+    let closeButton = document.getElementById("closeBtn");
+
+ if(document.querySelector("#about1").style.visibility === "hidden")
+    {document.querySelector("#about1").style.setProperty("visibility", "visible", "important");
+        if (!closeButton) { 
+            closeButton = document.createElement("button");
+            closeButton.id = "closeBtn";
+            closeButton.innerText = "Close";
+            closeButton.addEventListener("click", function () {
+                document.querySelector("#about1").style.visibility = "hidden";
+                closeButton.remove();});};
+        const close11 = document.querySelectorAll("#fonts1, #fun1, #themes1");
+        close11.forEach(close1 => {
+            if(close1.style.visibility !== "hidden"){
+                close1.style.setProperty("visibility", "hidden", "important");
+                closeButton.remove();}});
+                document.querySelector("#about1").append(closeButton); }
+ else{document.querySelector("#about1").style.setProperty("visibility", "hidden", "important");        
+    if (closeButton) {closeButton.remove();};
+ }
+ });
+
+
+
+
+
+
+
+
+
+const button21 = document.getElementById("the1");
+
+button21.addEventListener("click", function () {
+    document.body.style.background = "rgb(248, 155, 171)";
+
+    const boxes = document.querySelectorAll("#themes0, #themes1, #fonts1, #fun1, #about1");
+boxes.forEach(box => {
+    box.style.background = "rgb(248, 133, 152)";
+    box.style.color = "white";
+    box.style.borderColor = "black";
+    document.querySelector("#scrn2").style.background= "rgba(0, 0, 0, 0.31)";
+
+})
+});
+
+
+const button22 = document.getElementById("the2");
+
+button22.addEventListener("click", function () {
+    document.body.style.background = "black";
+    const boxes = document.querySelectorAll("#themes0, #themes1, #fonts1, #fun1, #about1");
+    boxes.forEach(box => {
+        box.style.background = "black";
+    box.style.color = "white";
+    box.style.borderColor = "white";
+    document.querySelector("#scrn2").style.background= "rgba(255, 255, 255, 0.116)";
+    document.querySelector("header").style.background = "white";
+    document.querySelector("header").style.color= "black";
+    document.querySelector("#navul").style.background= "black";
+    document.querySelector("#navul").style.color= "white";
+    document.querySelectorAll(".anim").forEach(function(element) {
+        element.style.borderColor = "white";
+    });
+    
+})
+});
+
+const button23 = document.getElementById("the3");
+
+button23.addEventListener("click", function () {
+    document.body.style.background = "rgb(250, 131, 234)";
+    const boxes = document.querySelectorAll("#themes0, #themes1, #fonts1, #fun1, #about1");
+    boxes.forEach(box => {
+        box.style.background = "rgb(253, 37, 224)";
+    box.style.color = "black";
+    box.style.borderColor = "white";
+    document.querySelector("#scrn2").style.background= "rgba(0, 0, 0, 0.31)";})
+});
+
+
+const button24 = document.getElementById("the4");
+
+button24.addEventListener("click", function () {
+    document.body.style.background = "cyan";
+    const boxes = document.querySelectorAll("#themes0, #themes1, #fonts1, #fun1, #about1");
+boxes.forEach(box => {
+    box.style.background = "rgb(20, 188, 230)";
+    box.style.color = "black";
+    box.style.borderColor = "black";
+    document.querySelector("#scrn2").style.background= "rgba(0, 0, 0, 0.31)";})
+});
+
+
+const button25 = document.getElementById("the5");
+
+button25.addEventListener("click", function () {
+    document.body.style.background = "lightgreen";
+    document.querySelector("header").style.background = "rgb(52, 238, 52)";
+    const boxes = document.querySelectorAll("#navul, #themes0, #themes1, #fonts1, #fun1, #about1");
+boxes.forEach(box => {
+    box.style.background = "rgb(178, 238, 82)";
+    box.style.color = "black";
+    box.style.borderColor = "black";
+    document.querySelector("#scrn2").style.background= "rgba(0, 0, 0, 0.31)";})
+});
+
+
+const button26 = document.getElementById("the6");
+
+button26.addEventListener("click", function () {
+    document.body.style.background = "yellow";
+    const boxes = document.querySelectorAll("#themes0, #themes1, #fonts1, #fun1, #about1");
+boxes.forEach(box => {
+    box.style.background = "rgb(220, 241, 99)";
+    box.style.color = "black";
+    box.style.borderColor = "black";
+    document.querySelector("#scrn2").style.background= "rgba(0, 0, 0, 0.31)";})
+});
+
+
+const button27 = document.getElementById("the7");
+
+button27.addEventListener("click", function () {
+    document.body.style.background = "powderblue";
+    const boxes = document.querySelectorAll("#themes0, #themes1, #fonts1, #fun1, #about1");
+boxes.forEach(box => {
+    box.style.background = "rgb(64, 112, 243)";
+    box.style.color = "black";
+    box.style.borderColor = "black";
+    document.querySelector("#scrn2").style.background= "rgba(0, 0, 0, 0.31)";})
+});
+
+
+const button28 = document.getElementById("the8");
+
+button28.addEventListener("click", function () {
+    document.body.style.background = "rgb(245, 89, 27)";
+    const boxes = document.querySelectorAll("#themes0, #themes1, #fonts1, #fun1, #about1");
+boxes.forEach(box => {
+    box.style.background = "rgb(248, 140, 98)";
+    box.color = "black";
+    box.style.borderColor = "white";
+    document.querySelector("#scrn2").style.background= "rgba(0, 0, 0, 0.31)";})
+});
+
+
+
+// these are for font styling 😊
+
+const changefonts1 = document.querySelector("#fon1");
+changefonts1.addEventListener("click", function() {
+    document.body.style.fontFamily= "Oswald";
+    document.querySelector("#closeBtn").style.fontFamily= "Oswald";
+});
+
+const changefonts2 = document.querySelector("#fon2");
+changefonts2.addEventListener("click", function() {
+    document.body.style.fontFamily= "Playwrite AU SA";
+    document.querySelector("#closeBtn").style.fontFamily= "Playwrite AU SA";
+});
+
+const changefonts3 = document.querySelector("#fon3");
+changefonts3.addEventListener("click", function() {
+    document.body.style.fontFamily= "Anton SC";
+    document.querySelector("#closeBtn").style.fontFamily= "Anton SC";
+});
+
+const changefonts4 = document.querySelector("#fon4");
+changefonts4.addEventListener("click", function() {
+    document.body.style.fontFamily= "Sixtyfour";
+    document.querySelector("#closeBtn").style.fontFamily= "Sixtyfour";
+});
+
+const changefonts5 = document.querySelector("#fon5");
+changefonts5.addEventListener("click", function() {
+    document.body.style.fontFamily= "Dancing Script";
+    document.querySelector("#closeBtn").style.fontFamily= "Dancing Script";
+});
+
+const changefonts6 = document.querySelector("#fon6");
+changefonts6.addEventListener("click", function() {
+    document.body.style.fontFamily= "Rubik Vinyl";
+    document.querySelector("#closeBtn").style.fontFamily= "Rubik Vinyl";
+});
+
+
+
+
+
+
+// maincalc
+// maincalc
+// maincalc
+// maincalc
+
+const bttn1 = document.getElementById("btn1");
+const output1 = document.getElementById("bbtn1");
+
+bttn1.addEventListener("click", function () {
+    bbtn1.textContent = "1";
+});
+
+const bttn2 = document.getElementById("btn2");
+const output2 = document.getElementById("bbtn2");
+
+bttn2.addEventListener("click", function () {
+    bbtn2.textContent = "2";
+});
+
+const bttn3 = document.getElementById("btn3");
+const output3 = document.getElementById("bbtn3");
+
+bttn3.addEventListener("click", function () {
+    bbtn3.textContent = "3";
+});
+
+
+const bttn4 = document.getElementById("btn4");
+const output4 = document.getElementById("bbtn4");
+
+bttn4.addEventListener("click", function () {
+    bbtn4.textContent = "4";
+});
+
+
+const bttn5 = document.getElementById("btn5");
+const output5 = document.getElementById("bbtn5");
+
+bttn5.addEventListener("click", function () {
+    bbtn5.textContent = "5";
+});
+
+
+const bttn6 = document.getElementById("btn6");
+const output6 = document.getElementById("bbtn6");
+
+bttn6.addEventListener("click", function () {
+    bbtn6.textContent = "6";
+});
+
+
+const bttn7 = document.getElementById("btn7");
+const output7 = document.getElementById("bbtn7");
+
+bttn7.addEventListener("click", function () {
+    bbtn7.textContent = "7";
+});
+
+
+const bttn8 = document.getElementById("btn8");
+const output8 = document.getElementById("bbtn8");
+
+bttn8.addEventListener("click", function () {
+    bbtn8.textContent = "8";
+});
+
+
+const bttn9 = document.getElementById("btn9");
+const output9 = document.getElementById("bbtn9");
+
+bttn9.addEventListener("click", function () {
+    bbtn9.textContent = "9";
+});
+
+
+const bttn10 = document.getElementById("btn10");
+const output10 = document.getElementById("bbtn10");
+
+bttn10.addEventListener("click", function () {
+    bbtn10.textContent = "0";
+});
+
+
+const bttn11 = document.getElementById("btn11");
+const output11 = document.getElementById("bbtn11");
+
+bttn11.addEventListener("click", function () {
+    bbtn11.textContent = "-";
+});
+
+
+const bttn12 = document.getElementById("btn12");
+const output12 = document.getElementById("bbtn12");
+
+bttn12.addEventListener("click", function () {
+    bbtn12.textContent = "+";
+});
+
+
+const bttn13 = document.getElementById("btn13");
+const output13 = document.getElementById("bbtn13");
+
+bttn13.addEventListener("click", function () {
+    bbtn13.textContent = "*";
+});
+
+
+const bttn14 = document.getElementById("btn14");
+const output14 = document.getElementById("bbtn14");
+
+bttn14.addEventListener("click", function () {
+    bbtn14.textContent = "/";
+});
+
+
+const bttn15 = document.getElementById("btn15");
+const output15 = document.getElementById("bbtn15");
+
+bttn15.addEventListener("click", function () {
+    bbtn15.textContent ="=";
+
+});
+
+const bttn16 = document.getElementById("btn16");
+const output16 = document.getElementById("bbtn16");
+
+bttn16.addEventListener("click", function () {
+    bbtn16.textContent = "%";
+});
+
+
+const hiButton1 = document.getElementById("btn17");
+hiButton1.addEventListener("click", function () {
+    document.body.style.background = "black";
+    const boxes = document.querySelectorAll("#themes0, #themes1, #fonts1, #fun1, #about1");
+    boxes.forEach(box => {
+        box.style.background = "black";
+    box.style.color = "white";
+    box.style.borderColor = "white";});
+    document.body.style.fontFamily= "Rubik Vinyl";
+    document.querySelector("#scrn2").style.background= "rgba(255, 0, 0, 0.16)";
+    document.querySelector("header").style.background = "red";
+    document.querySelectorAll(".anim").forEach(function(element) {
+        element.style.borderColor = "red";
+    });
+
+
+});
+
+const hiButton2 = document.getElementById("btn18");
+hiButton2.addEventListener("click", function () {
+    document.body.style.background = "black";
+    const boxes = document.querySelectorAll("#themes0, #themes1, #fonts1, #fun1, #about1");
+    boxes.forEach(box => {
+        box.style.background = "black";
+    box.style.color = "white";
+    box.style.borderColor = "white";
+    box.style.background = "black";
+});
+
+    document.querySelector("#scrn2").style.background= "rgba(52, 238, 52, 0.18)";
+    document.querySelector("header").style.background = "rgb(52, 238, 52)";
+    document.body.style.fontFamily= "Rubik Vinyl";
+    document.querySelectorAll(".anim").forEach(function(element) {
+        element.style.borderColor = "rgb(52, 238, 52)";
+    });
+
+    document.querySelector("#closeBtn").style.fontFamily= "Rubik Vinyl";
+
+
+});
+
+const hiButton3 = document.getElementById("btn19");
+
+hiButton3.addEventListener("click", function () {
+    document.body.style.background = "black";
+    const boxes = document.querySelectorAll("#themes0, #themes1, #fonts1, #fun1, #about1");
+    boxes.forEach(box => {
+        box.style.background = "black";
+    box.style.color = "white";
+    box.style.borderColor = "white";
+    document.querySelector("#scrn2").style.background= "rgba(255, 255, 255, 0.116)";
+    document.querySelector("header").style.background = "white";
+    document.querySelector("header").style.color= "black";
+    document.querySelector("#navul").style.background= "black";
+    document.querySelector("#navul").style.color= "white";
+    document.querySelectorAll(".anim").forEach(function(element) {
+        element.style.borderColor = "white";
+    });
+    
+})
+});
+
+const hiButton4 = document.getElementById("btn20");
+
+hiButton4.addEventListener("click", function () {
+    document.body.style.background = "";
+
+    const boxes = document.querySelectorAll("#themes0, #themes1, #fonts1, #fun1, #about1");
+boxes.forEach(box => {
+    box.style.background = "";
+    box.style.color = "";
+    box.style.borderColor = "";
+    document.querySelector("#scrn2").style.background= "";
+    document.querySelector("header").style.background = "";
+    document.querySelector("header").style.color= "";
+    document.querySelector("#navul").style.background= "";
+    document.querySelector("#navul").style.color= "";
+    document.querySelectorAll(".anim").forEach(function(element) {
+        element.style.borderColor = "";
+    });
+    document.body.style.fontFamily= "";
+
+})
+});
+
+
+</script>
+</body>\
+
+</html>
